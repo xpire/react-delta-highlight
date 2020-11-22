@@ -48,7 +48,7 @@ const Reveal = styled(motion.div)``;
 /**
  * UI Component which provides the Sliding Animation on Render.
  */
-export const Slider: React.FC<SliderProps> = ({
+const Slider: React.FC<SliderProps> = ({
   children,
   darkMode = false,
   duration = 0.75,
@@ -91,3 +91,5 @@ export const Slider: React.FC<SliderProps> = ({
     </RelativeDiv>
   );
 };
+
+export default Slider;

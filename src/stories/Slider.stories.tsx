@@ -3,9 +3,9 @@ import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 
 import styled from "styled-components";
-import Slider, { SliderProps } from "../components/Slider";
+import Slider from "../components/Slider";
 import logo from "../logo.svg";
-import { Typography } from "@material-ui/core";
+import Typography from "@material-ui/core/Typography";
 
 export default {
   title: "Example/Slider",
@@ -26,7 +26,7 @@ const Background = styled.div`
   height: 100px;
 `;
 
-const Template: Story<SliderProps> = ({
+const Template: Story = ({
   darkMode,
   duration,
   children = "Hello",
