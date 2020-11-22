@@ -67,9 +67,28 @@
   },
   "bit": {
     "env": {
-      "compiler": "bit.envs/compilers/react@1.0.21"
+      "compiler": {
+        "bit.envs/compilers/react-typescript@3.1.61": {
+          "rawConfig": {
+            "tsconfig": {
+              "compilerOptions": {
+                "types": [
+                  "node"
+                ]
+              }
+            }
+          }
+        }
+      }
     },
     "componentsDefaultDirectory": "components/{name}",
-    "packageManager": "yarn"
+    "packageManager": "yarn",
+    "overrides": {
+      "*": {
+        "devDependencies": {
+          "@types/node": "^12.12.29"
+        }
+      }
+    }
   }
 }
