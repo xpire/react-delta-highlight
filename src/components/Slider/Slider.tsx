@@ -21,6 +21,14 @@ export interface SliderProps extends InternalProps {
 }
 
 const Background = styled(motion.div)`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+`;
+
+const RelativeDiv = styled(motion.div)`
   position: relative;
   display: inline-block;
 `;
@@ -47,7 +55,7 @@ export const Slider: React.FC<SliderProps> = ({
   ...props
 }) => {
   return (
-    <Background {...props}>
+    <RelativeDiv {...props}>
       {/* Actual Component */}
       <Reveal
         initial={{ opacity: 0 }}
@@ -57,16 +65,8 @@ export const Slider: React.FC<SliderProps> = ({
         {children}
       </Reveal>
       {/* Slide Component */}
-      <motion.div
-        style={{
-          position: "absolute",
-          width: "100%",
-          height: "100%",
-          top: 0,
-          left: 0,
-        }}
-      >
-        <Background
+      <Background>
+        <RelativeDiv
           initial={{ height: "100%", width: "0%", left: 0 }}
           animate={{
             width: "100%",
@@ -86,8 +86,8 @@ export const Slider: React.FC<SliderProps> = ({
             }}
             darkMode={darkMode}
           />
-        </Background>
-      </motion.div>
-    </Background>
+        </RelativeDiv>
+      </Background>
+    </RelativeDiv>
   );
 };

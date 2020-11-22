@@ -3,7 +3,7 @@ import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 
 import styled from "styled-components";
-import { Slider, SliderProps } from "../components/Slider/Slider";
+import Slider, { SliderProps } from "../components/Slider";
 import logo from "../logo.svg";
 import { Typography } from "@material-ui/core";
 
